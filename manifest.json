@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "deleting bookmarks from VK",
+  "version": "0.1.0",
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval';script-src-elem 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.vk.com/*"],
+      "js": ["js/jquery-3.5.1.js"]
+    }
+  ]
+}
